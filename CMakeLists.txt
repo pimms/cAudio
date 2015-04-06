@@ -48,7 +48,7 @@ set(CAUDIO_LIB_DIRECTORY "/lib")
 
 # Customise what to build
 option(CAUDIO_STATIC "Static build" FALSE)
-option(CAUDIO_BUILD_SAMPLES "Build Samples" TRUE)
+option(CAUDIO_BUILD_SAMPLES "Build Samples" FALSE)
 option(CAUDIO_BUILD_CSHARP_WRAPPER "Build CSharpWrapper - this wrapper is used with the provided *.cs files" FALSE)
 
 #Custom settings 
@@ -86,14 +86,15 @@ if (CAUDIO_IOS_BUILD)
   remove_definitions(-msse)
 
 elseif (APPLE AND NOT CAUDIO_IOS_BUILD)
+  # Multiple lines in this branch has been commented out, through a process of poking and prodding until it compiles.
 
   # Set 10.5 as the base SDK by default
-  set(XCODE_ATTRIBUTE_SDKROOT macosx)
-  set(CMAKE_OSX_SYSROOT macosx)
+  #set(XCODE_ATTRIBUTE_SDKROOT macosx)
+  #set(CMAKE_OSX_SYSROOT macosx)
   set(CMAKE_OSX_DEPLOYMENT_TARGET 10.5)
 
   if (NOT CMAKE_OSX_ARCHITECTURES)
-    set(CMAKE_OSX_ARCHITECTURES $(ARCHS_STANDARD_32_64_BIT))
+    # set(CMAKE_OSX_ARCHITECTURES $(ARCHS_STANDARD_32_64_BIT))
   endif()
 endif()
 
