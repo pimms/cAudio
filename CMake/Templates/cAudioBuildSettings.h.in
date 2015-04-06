@@ -14,7 +14,7 @@
 #define CAUDIO_COMPILE_WITH_FILE_SOURCE @CAUDIO_SET_ENABLE_DEFAULT_FILESYSTEM@
 
 //! This define controls whether the default file logger (html) is compiled into the library
-#define CAUDIO_COMPILE_WITH_FILE_LOG_RECEIVER @CAUDIO_SET_ENABLE_DEFAULT_FILE_LOGGER@
+#define CAUDIO_COMPILE_WITH_FILE_LOG_RECEIVER 0
 
 //! This define controls whether the default console logger is compiled into the library
 #define CAUDIO_COMPILE_WITH_CONSOLE_LOG_RECEIVER @CAUDIO_SET_ENABLE_DEFAULT_CONSOLE_LOGGER@
